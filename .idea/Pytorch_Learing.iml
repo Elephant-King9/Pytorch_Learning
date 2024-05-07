@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/dataset/cifar-10-batches-py" />
     </content>
     <orderEntry type="jdk" jdkName="/opt/homebrew/anaconda3" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
