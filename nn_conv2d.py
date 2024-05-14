@@ -33,9 +33,9 @@ for data in dataLoader:
     writer.add_images('input', img, i)
 
     # -1是一个占位符，让Pytorch自动计算维度大小
-    output = torch.reshape(output,(-1, 3, 30, 30))
+    output1 = torch.reshape(output,(-1, 3, 30, 30))
     # 无法直接传入6通道，只能3通道
-    writer.add_images("output", output, i)
+    writer.add_images("output1", output1, i)
     i = i + 1
 
 writer.close()
