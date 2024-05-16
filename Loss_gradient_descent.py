@@ -36,9 +36,18 @@ class Net(nn.Module):
 
 
 net = Net()
-# print(net)
-input_test = torch.ones((64, 3, 32, 32))  # torch.ones用于模拟数据，用于检验定义的每层操作是否有错误
-output_test = net(input_test)
-# print(output.shape)
-writer = SummaryWriter('./logs')
-writer.add_graph(net, input_test)       # 给定网络的类和输入的 input
+criterion = nn.CrossEntropyLoss()  # 损失函数
+optim = torch.optim.SGD(net.parameters(), lr=0.1)
+
+# 将整个CIFAR10数据集进行20次循环训练
+for epoch in range(20):
+    res_loss = 0.0
+    for data in dataLoader:
+        optim.zero_grad()
+        img, target = data
+        output = net(img)  # 模型经过CNN后得出的概率值
+        loss = criterion(output, target)  # 根据从模型训练出来的概率值与目标值target进行交叉熵损失函数求解
+        loss.backward()  # 计算本次参数的梯度
+        optim.step()
+        res_loss = res_loss + loss
+    print(res_loss)
