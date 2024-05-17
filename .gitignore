@@ -163,4 +163,4 @@ cython_debug/
 # my ignore
 cifar-10-batches-py/
 dataset/*.gz
-./*.pth
+/*.pth
