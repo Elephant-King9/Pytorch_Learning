@@ -164,3 +164,4 @@ cython_debug/
 cifar-10-batches-py/
 dataset/*.gz
 /*.pth
+/src/*.pth
