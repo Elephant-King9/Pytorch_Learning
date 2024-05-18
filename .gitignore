@@ -165,3 +165,4 @@ cifar-10-batches-py/
 dataset/*.gz
 /*.pth
 /src/*.pth
+/src/CIFAR10_logs/*
