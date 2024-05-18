@@ -3,7 +3,7 @@ import torch
 import torchvision.transforms
 from torch.utils.tensorboard import SummaryWriter
 
-from model import *
+from CIFAR10Model import *
 
 # 1.创建训练数据集
 train_dataset = torchvision.datasets.CIFAR10(root='../dataset', train=True, download=True,
